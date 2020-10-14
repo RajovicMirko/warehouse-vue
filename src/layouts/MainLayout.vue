@@ -32,7 +32,8 @@
         >
           {{$t('drawerTitle')}}
         </q-item-label>
-        <EssentialLink
+        <component
+          :is="$getComponent('drawer-link')"
           v-for="link in linksData"
           :key="link.title"
           v-bind="link"
@@ -47,11 +48,8 @@
 </template>
 
 <script>
-import EssentialLink from 'components/layout/EssentialLink.vue'
-
 export default {
   name: 'MainLayout',
-  components: { EssentialLink },
   data () {
     return {
       leftDrawerOpen: false,

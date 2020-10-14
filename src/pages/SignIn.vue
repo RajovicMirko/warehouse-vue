@@ -1,48 +1,65 @@
 <template>
-  <div class="fullscreen bg-white text-center q-pa-md flex flex-center">
-    <q-form @submit="handleSubmit" ref="signinform">
-      <span class="form-title">Sign in</span>
+  <div class="fullscreen row bg-white text-center q-pa-md flex flex-center">
+    <component
+      :is="$getComponent('form-custom')"
+      reference="signin"
+      title="Sign In"
+      @onSubmit="handleSubmit"
+    >
       <component
         :is="$getComponent('input-outline')"
         name="email"
         type="email"
-        :value.sync="user.email"
+        :value="$v.email.$model"
         label="Email"
+        :errors="[
+          { visible: $v.email.$dirty ? !$v.email.required : false, message: 'Field is required'},
+          { visible: $v.email.$dirty ? !$v.email.email : false, message: 'Must be a valid email'}
+        ]"
+        @onChange="handleChange"
       />
 
       <component
         :is="$getComponent('input-outline')"
         name="password"
         type="password"
-        :value.sync="user.password"
+        :value.sync="$v.password.$model"
         label="Password"
+        :errors="[
+          { visible: $v.password.$dirty ? !$v.password.required : false, message: 'Field is required'},
+          { visible: $v.password.$dirty ? !$v.password.minLength : false, message: 'Field must be at least 6 chars long'}
+        ]"
+        @onChange="handleChange"
       />
 
-      <q-btn type="submit" class="btn-primary">Sign in</q-btn>
-    </q-form>
+      <div class="actions">
+        <q-btn type="submit" class="bg-primary text-white">Sign in</q-btn>
+      </div>
+    </component>
   </div>
 </template>
 
 <script>
+import signInValidationMixin from '../vualidate/sign-in'
+
 export default {
   name: 'SignIn',
-  data () {
-    return {
-      user: {
-        email: '',
-        password: ''
-      }
-    }
-  },
+  mixins: [signInValidationMixin],
   methods: {
-    handleSubmit () {
-      this.$refs.signinform.validate().then((success) => {
-        if (success) {
-          console.dir(this.user)
-        } else {
-          console.log('error')
+    handleChange (input) {
+      this[input.name] = input.value
+    },
+    handleSubmit (form) {
+      this.$v.$touch()
+      if (this.$v.$invalid) {
+        console.log('submit error', this.$v)
+      } else {
+        const user = {
+          email: this.email,
+          password: this.password
         }
-      })
+        console.log('submit success', user)
+      }
     }
   }
 }

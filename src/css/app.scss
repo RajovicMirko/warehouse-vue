@@ -1,12 +1,13 @@
+@import "./sign-in-form.scss";
 // app global css in SCSS form
 
 .text-muted {
   color: rgb(134, 134, 134);
 }
 
-.form-title {
-  font-size: 2rem;
-  color: $primary;
+.error-message {
   margin: 0;
   padding: 0;
+  font-size: 0.8rem;
+  color: $negative;
 }

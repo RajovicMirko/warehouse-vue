@@ -1,15 +1,24 @@
 <template>
-  <q-input
-    @input="$emit('update:value', $event)"
-    :name="name"
-    :type="type"
-    :value="value"
-    :label="label"
-    :class="`q-mb-md ${addClass}`"
-    rounded
-    outlined
-    dense
-  />
+  <div class="q-mb-md">
+    <q-input
+      @input="handleChange"
+      :name="name"
+      :type="type"
+      :value="value"
+      :label="label"
+      :class="`${addClass}`"
+      rounded
+      outlined
+      dense
+    />
+    <component
+      :is="$getComponent('error-message')"
+      v-for="(error, i) in errors"
+      :key="i"
+      :visible='error.visible'
+      :message='error.message'
+    />
+  </div>
 </template>
 
 <script>
@@ -35,6 +44,15 @@ export default {
     addClass: {
       type: String,
       default: ''
+    },
+    errors: {
+      type: Array,
+      required: true
+    }
+  },
+  methods: {
+    handleChange (value) {
+      this.$emit('onChange', { name: this.name, value })
     }
   }
 }

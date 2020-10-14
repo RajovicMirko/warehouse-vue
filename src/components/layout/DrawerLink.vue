@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'EssentialLink',
+  name: 'DrawerLink',
   props: {
     title: {
       type: String,
