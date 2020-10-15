@@ -3,7 +3,7 @@
     v-model="language"
     :options="languageOptions"
     :label="$t('languageSelectLabel')"
-    :selected="$i18n.locale"
+    :selected="language"
     :class="addClass"
     dense
     borderless

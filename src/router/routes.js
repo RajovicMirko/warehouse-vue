@@ -7,11 +7,11 @@ import Stocks from '../pages/Stock/Stocks'
 import Users from '../pages/User/Users'
 
 const routes = [
+  { path: '/signin', component: SignIn },
   {
     path: '/',
     component: Layout,
     children: [
-      { path: 'signin', component: SignIn },
       { path: '', component: Home },
       { path: 'warehouses', component: Warehouses },
       { path: 'stocks', component: Stocks },

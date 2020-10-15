@@ -14,6 +14,8 @@ export default {
   drawerStockCaption: 'Stock overview',
   drawerUserTitle: 'Users',
   drawerUserCaption: 'Users overview',
+  drawerSignOutTitle: 'Sign out',
+  drawerSignOutCaption: '',
   // SIGN IN PAGE
   signinTitle: 'Sign in',
   signinEmailLabel: 'Email',

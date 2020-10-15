@@ -60,7 +60,6 @@ export default {
   },
   computed: {
     rerenderComponent () {
-      console.log('drawer link rerender component')
       return this.$store.getters['language/getRerenderComponent']
     }
   }

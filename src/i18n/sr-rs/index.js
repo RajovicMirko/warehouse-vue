@@ -14,6 +14,8 @@ export default {
   drawerStockCaption: 'Pregled lagera',
   drawerUserTitle: 'Korisnici',
   drawerUserCaption: 'Pregled korisnika',
+  drawerSignOutTitle: 'Odjavi se',
+  drawerSignOutCaption: '',
   // SIGN IN PAGE
   signinTitle: 'Prijava',
   signinEmailLabel: 'Email',

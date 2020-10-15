@@ -74,8 +74,8 @@ export default {
           to: '/users'
         },
         {
-          title: 'Sign out',
-          // caption: 'drawerUserCaption',
+          title: 'drawerSignOutTitle',
+          caption: 'drawerSignOutCaption',
           icon: 'fas fa-sign-out-alt',
           to: '/signin'
         }

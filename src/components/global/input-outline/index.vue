@@ -1,5 +1,6 @@
 <template>
     <q-input
+      :key="rerenderComponent"
       :id="id"
       :type="type"
       :value="value"
@@ -41,6 +42,11 @@ export default {
     rules: {
       type: Array,
       default: () => []
+    }
+  },
+  computed: {
+    rerenderComponent () {
+      return this.$store.getters['language/getRerenderComponent']
     }
   },
   methods: {
