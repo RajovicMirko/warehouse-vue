@@ -1,6 +1,7 @@
 // LAYOUT
 import DrawerLink from './layout/DrawerLink'
 // GLOBAL
+import languageSelect from './global/language-select'
 import formCustom from './global/form'
 import formTitle from './global/form/form-title'
 import errorMessage from './global/form/error-message'
@@ -10,6 +11,7 @@ const componentsMap = {
   // LAYOUT
   'drawer-link': DrawerLink,
   // GLOBAL
+  'language-select': languageSelect,
   'form-custom': formCustom,
   'form-title': formTitle,
   'error-message': errorMessage,

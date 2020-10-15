@@ -4,6 +4,8 @@ export default {
   appDescription: '',
   failed: 'Action failed',
   success: 'Action was successful',
+  // LANGUAGE
+  languageSelectLabel: 'Choose Language',
   // DRAWER DATA
   drawerTitle: 'Navigation',
   drawerWarehouseTitle: 'Warehouse',

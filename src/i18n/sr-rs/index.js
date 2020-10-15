@@ -4,6 +4,8 @@ export default {
   appDescription: '',
   failed: 'Neuspešna akcija',
   success: 'Uspešno izvršena akcija',
+  // LANGUAGE
+  languageSelectLabel: 'Izaberi jezik',
   // DRAWER DATA
   drawerTitle: 'Navigacija',
   drawerWarehouseTitle: 'Magacin',

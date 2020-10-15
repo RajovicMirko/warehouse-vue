@@ -15,6 +15,8 @@
         </q-card-section>
       </template>
 
+      <component :is="$getComponent('language-select')" />
+
       <component
         :is="$getComponent('input-outline')"
         id="email"
