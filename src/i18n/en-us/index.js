@@ -11,5 +11,14 @@ export default {
   drawerStockTitle: 'Stock',
   drawerStockCaption: 'Stock overview',
   drawerUserTitle: 'Users',
-  drawerUserCaption: 'Users overview'
+  drawerUserCaption: 'Users overview',
+  // SIGN IN PAGE
+  signinTitle: 'Sign in',
+  signinEmailLabel: 'Email',
+  signinEmailErrorRequiered: 'Field is required',
+  signinEmailErrorEmail: 'Must be valid email',
+  signinPasswordLabel: 'Password',
+  signinPasswordErrorRequiered: 'Field is required',
+  signinPasswordErrorMinLength: 'Field must be at least 6 chars long',
+  singinButtonSignIn: 'Sign in'
 }

@@ -11,5 +11,14 @@ export default {
   drawerStockTitle: 'Lager',
   drawerStockCaption: 'Pregled lagera',
   drawerUserTitle: 'Korisnici',
-  drawerUserCaption: 'Pregled korisnika'
+  drawerUserCaption: 'Pregled korisnika',
+  // SIGN IN PAGE
+  signinTitle: 'Prijava',
+  signinEmailLabel: 'Email',
+  signinEmailErrorRequiered: 'Obavezno polje',
+  signinEmailErrorEmail: 'Nije validan email format',
+  signinPasswordLabel: 'Šifra',
+  signinPasswordErrorRequiered: 'Obavezno polje',
+  signinPasswordErrorMinLength: 'Mora imata najmanje 6 karaktera',
+  singinButtonSignIn: 'Prijavi se'
 }

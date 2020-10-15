@@ -3,7 +3,7 @@
     <component
       :is="$getComponent('form-custom')"
       reference="signin"
-      title="Sign In"
+      :title="$t('signinTitle')"
       @onSubmit="handleSubmit"
     >
       <template v-slot:form-logo>
@@ -20,10 +20,10 @@
         id="email"
         type="email"
         :value="$v.email.$model"
-        label="Email"
+        :label="$t('signinEmailLabel')"
         :rules="[
-          () => $v.email.required || 'Field is required',
-          () => $v.email.email || 'Must be a valid email',
+          () => $v.email.required || $t('signinEmailErrorRequiered'),
+          () => $v.email.email || $t('signinEmailErrorEmail'),
         ]"
         @onChange="handleChange"
       />
@@ -33,16 +33,16 @@
         id="password"
         type="password"
         :value.sync="$v.password.$model"
-        label="Password"
+        :label="$t('signinPasswordLabel')"
         :rules="[
-          () => $v.password.required || 'Field is required',
-          () => $v.password.minLength || 'Field must be at least 6 chars long',
+          () => $v.password.required || $t('signinPasswordErrorRequiered'),
+          () => $v.password.minLength || $t('signinPasswordErrorMinLength'),
         ]"
         @onChange="handleChange"
       />
 
       <div class="actions">
-        <q-btn type="submit" class="bg-primary text-white full-width">Sign in</q-btn>
+        <q-btn type="submit" class="bg-primary text-white full-width">{{$t('singinButtonSignIn')}}</q-btn>
       </div>
     </component>
   </div>
@@ -71,6 +71,7 @@ export default {
           password: this.password
         }
         console.log('Sign in success', user)
+        this.$router.push('/')
       } else {
         console.log('Sign in error')
       }

@@ -71,6 +71,12 @@ export default {
           caption: this.$t('drawerUserCaption'),
           icon: 'fas fa-user',
           to: '/users'
+        },
+        {
+          title: 'Sign out',
+          // caption: this.$t('drawerUserCaption'),
+          icon: 'fas fa-sign-out-alt',
+          to: '/signin'
         }
       ]
     }
