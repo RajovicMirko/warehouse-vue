@@ -56,26 +56,26 @@ export default {
       leftDrawerOpen: false,
       linksData: [
         {
-          title: this.$t('drawerWarehouseTitle'),
-          caption: this.$t('drawerWarehouseCaption'),
+          title: 'drawerWarehouseTitle',
+          caption: 'drawerWarehouseCaption',
           icon: 'fas fa-warehouse',
           to: '/warehouses'
         },
         {
-          title: this.$t('drawerStockTitle'),
-          caption: this.$t('drawerStockCaption'),
+          title: 'drawerStockTitle',
+          caption: 'drawerStockCaption',
           icon: 'fas fa-boxes',
           to: '/stocks'
         },
         {
-          title: this.$t('drawerUserTitle'),
-          caption: this.$t('drawerUserCaption'),
+          title: 'drawerUserTitle',
+          caption: 'drawerUserCaption',
           icon: 'fas fa-user',
           to: '/users'
         },
         {
           title: 'Sign out',
-          // caption: this.$t('drawerUserCaption'),
+          // caption: 'drawerUserCaption',
           icon: 'fas fa-sign-out-alt',
           to: '/signin'
         }

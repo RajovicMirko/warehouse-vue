@@ -3,6 +3,7 @@
     v-model="language"
     :options="languageOptions"
     :label="$t('languageSelectLabel')"
+    :selected="$i18n.locale"
     :class="addClass"
     dense
     borderless
@@ -49,6 +50,7 @@ export default {
   watch: {
     language (value) {
       this.$i18n.locale = value
+      this.$store.dispatch('language/languageChange', null, { root: true })
     }
   }
 

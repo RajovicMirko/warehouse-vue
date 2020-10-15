@@ -6,6 +6,7 @@
     :href="link"
     :to="to"
     class="text-muted"
+    :key="rerenderComponent"
   >
     <q-item-section
       v-if="icon"
@@ -15,9 +16,9 @@
     </q-item-section>
 
     <q-item-section>
-      <q-item-label v-if="title">{{ title }}</q-item-label>
+      <q-item-label v-if="title">{{ $t(title) }}</q-item-label>
       <q-item-label v-if="caption" caption>
-        {{ caption }}
+        {{ $t(caption) }}
       </q-item-label>
     </q-item-section>
   </q-item>
@@ -55,6 +56,12 @@ export default {
     isBlank: {
       type: Boolean,
       default: false
+    }
+  },
+  computed: {
+    rerenderComponent () {
+      console.log('drawer link rerender component')
+      return this.$store.getters['language/getRerenderComponent']
     }
   }
 }

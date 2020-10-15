@@ -11,6 +11,8 @@ const i18n = new VueI18n({
   messages
 })
 
+Vue.prototype.$rerenderComponents = 0
+
 export default ({ app }) => {
   // Set i18n instance on app
   app.i18n = i18n
