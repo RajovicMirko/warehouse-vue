@@ -1,13 +1,8 @@
-@import "./sign-in-form.scss";
-// app global css in SCSS form
-
 .text-muted {
   color: rgb(134, 134, 134);
 }
 
-.error-message {
-  margin: 0;
-  padding: 0;
-  font-size: 0.8rem;
-  color: $negative;
+// FORM ERROR MESSAGE SMALL FIX
+.q-field__bottom--animated {
+  padding-top: 3px;
 }

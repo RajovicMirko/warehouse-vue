@@ -1,16 +1,23 @@
 <template>
-  <q-form
-    class="col-xs-12 col-sm-7 col-md-5 col-lg-4 col-xl-2"
-    :class="addClass"
-    :ref="reference"
-    @submit="handleSubmit"
+  <q-card
+    class="col-xs-12 col-sm-7 col-md-5 col-lg-4 col-xl-2 q-py-md q-px-sm"
   >
-    <component
-      :is="$getComponent('form-title')"
-      :title="title"
-    />
-    <slot />
-  </q-form>
+    <slot name="form-logo" />
+
+    <q-card-section>
+      <q-form
+        :class="addClass"
+        :ref="reference"
+        @submit="handleSubmit"
+      >
+        <component
+          :is="$getComponent('form-title')"
+          :title="title"
+        />
+        <slot />
+      </q-form>
+    </q-card-section>
+  </q-card>
 </template>
 
 <script>
@@ -34,7 +41,8 @@ export default {
     this.$refs[this.reference].$el[0].focus()
   },
   methods: {
-    handleSubmit () {
+    handleSubmit (event) {
+      event.preventDefault()
       this.$emit('onSubmit', this.$refs[this.reference])
     }
   }

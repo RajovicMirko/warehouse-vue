@@ -2,7 +2,7 @@
   <div class="q-mb-md">
     <span
       v-if="title"
-      class="text-h4 text-primary"
+      class="text-h5 text-primary"
     >
       {{title}}
     </span>

@@ -1,31 +1,24 @@
 <template>
-  <div class="q-mb-md">
     <q-input
-      @input="handleChange"
-      :name="name"
+      :id="id"
       :type="type"
       :value="value"
       :label="label"
-      :class="`${addClass}`"
+      lazy-rules
+      :rules="rules"
       rounded
       outlined
       dense
+      autocorrect="off"
+      @input="handleChange"
     />
-    <component
-      :is="$getComponent('error-message')"
-      v-for="(error, i) in errors"
-      :key="i"
-      :visible='error.visible'
-      :message='error.message'
-    />
-  </div>
 </template>
 
 <script>
 export default {
   name: 'input-outline',
   props: {
-    name: {
+    id: {
       type: String,
       default: ''
     },
@@ -45,14 +38,14 @@ export default {
       type: String,
       default: ''
     },
-    errors: {
+    rules: {
       type: Array,
-      required: true
+      default: () => []
     }
   },
   methods: {
     handleChange (value) {
-      this.$emit('onChange', { name: this.name, value })
+      this.$emit('onChange', { id: this.id, value })
     }
   }
 }
