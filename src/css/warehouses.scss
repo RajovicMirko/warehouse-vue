@@ -1,0 +1,19 @@
+@import "./quasar.variables.scss";
+
+.warehouses {
+  & .page-header {
+    position: sticky !important;
+    top: 50px !important;
+    z-index: 10;
+  }
+
+  & .warehouse-card {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.04);
+      .title-wrapper {
+        background-color: $info !important;
+      }
+    }
+  }
+}

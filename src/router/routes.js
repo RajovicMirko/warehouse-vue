@@ -2,7 +2,7 @@ import Error404 from '../pages/Error404'
 import SignIn from '../pages/SignIn'
 import Layout from 'layouts/MainLayout'
 import Home from '../pages'
-import Warehouses from '../pages/Warehouse/Warehouses'
+import Warehouses from '../pages/Warehouses/'
 import Stocks from '../pages/Stock/Stocks'
 import Users from '../pages/User/Users'
 

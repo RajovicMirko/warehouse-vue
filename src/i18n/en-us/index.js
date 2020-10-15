@@ -24,5 +24,11 @@ export default {
   signinPasswordLabel: 'Password',
   signinPasswordErrorRequiered: 'Field is required',
   signinPasswordErrorMinLength: 'Field must be at least 6 chars long',
-  singinButtonSignIn: 'Sign in'
+  singinButtonSignIn: 'Sign in',
+  // WAREHOUSES PAGE
+  warehousesTitle: 'Warehouses',
+  warehousesCardCity: 'City',
+  warehousesCardAddress: 'Address',
+  warehousesCardContactPerson: 'Contact Person',
+  warehousesCardContactPhone: 'Contact Phone'
 }

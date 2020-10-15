@@ -24,5 +24,11 @@ export default {
   signinPasswordLabel: 'Šifra',
   signinPasswordErrorRequiered: 'Obavezno polje',
   signinPasswordErrorMinLength: 'Mora imata najmanje 6 karaktera',
-  singinButtonSignIn: 'Prijavi se'
+  singinButtonSignIn: 'Prijavi se',
+  // WAREHOUSES PAGE
+  warehousesTitle: 'Magacini',
+  warehousesCardCity: 'Grad',
+  warehousesCardAddress: 'Adresa',
+  warehousesCardContactPerson: 'Kontakt osoba',
+  warehousesCardContactPhone: 'Kontakt telefon'
 }

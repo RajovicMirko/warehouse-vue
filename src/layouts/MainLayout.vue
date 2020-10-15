@@ -11,7 +11,7 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
-        <q-toolbar-title>
+        <q-toolbar-title @click="() => this.$router.push('/')">
           {{$t('appTitle')}}
         </q-toolbar-title>
 
@@ -28,9 +28,9 @@
       <q-list>
         <q-item-label
           header
-          class="text-white flex justify-between items-center bg-secondary"
+          class="text-white flex justify-between items-center bg-secondary q-ma-none q-pa-sm"
         >
-          <span class="q-ma-none">{{$t('drawerTitle')}}</span>
+          <span>{{$t('drawerTitle')}}</span>
           <component :is="$getComponent('language-select')" labelColor="white" :dark="true"/>
         </q-item-label>
         <component
