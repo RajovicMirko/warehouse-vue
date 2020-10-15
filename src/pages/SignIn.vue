@@ -11,11 +11,10 @@
           <div class="text-h4 text-primary flex justify-center">
             <q-icon name="fas fa-warehouse q-mr-md"></q-icon>
             <span>{{$t('appTitle')}}</span>
+            <component :is="$getComponent('language-select')" style="width: 50%" />
           </div>
         </q-card-section>
       </template>
-
-      <component :is="$getComponent('language-select')" />
 
       <component
         :is="$getComponent('input-outline')"

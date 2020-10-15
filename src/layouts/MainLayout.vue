@@ -28,9 +28,10 @@
       <q-list>
         <q-item-label
           header
-          class="text-grey-8"
+          class="text-white flex justify-between items-center bg-secondary"
         >
-          {{$t('drawerTitle')}}
+          <span class="q-ma-none">{{$t('drawerTitle')}}</span>
+          <component :is="$getComponent('language-select')" labelColor="white" :dark="true"/>
         </q-item-label>
         <component
           :is="$getComponent('drawer-link')"
