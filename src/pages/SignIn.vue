@@ -8,7 +8,7 @@
     >
       <template v-slot:form-logo>
         <q-card-section class="q-pb-none">
-          <div class="text-h4 text-primary flex justify-center">
+          <div class="text-h4 text-secondary flex justify-center">
             <q-icon name="fas fa-warehouse q-mr-md"></q-icon>
             <span>{{$t('appTitle')}}</span>
             <component :is="$getComponent('language-select')" style="width: 50%" />
@@ -43,7 +43,13 @@
       />
 
       <div class="actions">
-        <q-btn type="submit" class="bg-primary text-white full-width">{{$t('singinButtonSignIn')}}</q-btn>
+        <!-- <q-btn type="submit" class="bg-primary text-white full-width">{{$t('singinButtonSignIn')}}</q-btn> -->
+        <component
+          :is="$getComponent('button-custom')"
+          type="submit"
+          addClass="bg-secondary text-white full-width"
+          title="singinButtonSignIn"
+        />
       </div>
     </component>
   </div>

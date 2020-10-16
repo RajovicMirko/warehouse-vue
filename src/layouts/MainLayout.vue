@@ -28,7 +28,7 @@
       <q-list>
         <q-item-label
           header
-          class="text-white flex justify-between items-center bg-secondary q-ma-none q-pa-sm"
+          class="text-white flex justify-between items-center bg-secondary q-ma-none q-px-md q-py-sm"
         >
           <span>{{$t('drawerTitle')}}</span>
           <component :is="$getComponent('language-select')" labelColor="white" :dark="true"/>

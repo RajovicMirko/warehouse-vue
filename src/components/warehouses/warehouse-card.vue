@@ -1,5 +1,5 @@
 <template>
-  <q-card class="warehouse-card q-ma-md col-12 col-sm-5" @click="handleClick">
+  <q-card class="warehouse-card q-ma-md col-12 col-sm-5 col-lg-3" @click="handleClick">
       <q-card-section class="bg-primary text-center text-white q-pa-sm title-wrapper">
         <div class="text-subtitle1">Warehouse name</div>
       </q-card-section>

@@ -6,6 +6,7 @@ import formCustom from './global/form'
 import formTitle from './global/form/form-title'
 import errorMessage from './global/form/error-message'
 import inputOutline from './global/input-outline'
+import buttonCustom from './global/button'
 // WAREHOUSES
 import warehouseCard from './warehouses/warehouse-card'
 
@@ -18,6 +19,7 @@ const componentsMap = {
   'form-title': formTitle,
   'error-message': errorMessage,
   'input-outline': inputOutline,
+  'button-custom': buttonCustom,
   // WAREHOUSES
   'warehouse-card': warehouseCard
 }

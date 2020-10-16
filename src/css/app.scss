@@ -1,5 +1,15 @@
 @import "./warehouses.scss";
 
+.q-item.q-router-link,
+.q-item {
+  &--active {
+    color: $secondary;
+    & .q-item__label--caption {
+      color: $secondary !important;
+    }
+  }
+}
+
 .text-muted {
   color: rgb(134, 134, 134);
 }

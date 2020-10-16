@@ -1,7 +1,7 @@
 <template>
   <div class="warehouses">
     <div class="page-header flex justify-between items-center bg-secondary q-px-md q-py-sm">
-      <span class="text-h5 text-white">{{$t('warehousesTitle')}}</span>
+      <span class="text-h6 text-white q-ma-none">{{$t('warehousesTitle')}}</span>
       <q-btn color="warning" icon="add" round />
     </div>
     <div class="row justify-around q-pa-md">
